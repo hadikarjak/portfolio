@@ -1,0 +1,259 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    text-transform: capitalize;
+}
+
+:root {
+    --puprle: #351B6B;
+    --pink: #1C0D3B;
+    --gradient: linear-gradient(90deg, var(--puprle), var(--pink));
+    --main-transition: 0.4s;
+    --padding: 100px;
+}
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    background-color: #f4f4f7;
+}
+
+.bg-big {
+    position: relative;
+    margin-top: 0;
+    overflow: hidden;
+    height: 460px;
+    background-image: url('../images/bg-default-stars-mid.jpg');
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bg-home {
+    left: 0;
+    top: 345px;
+    right: 0;
+    bottom: auto;
+    background-color: var(--pink);
+    position: absolute;
+    background-color: #f4f4f7;
+    opacity: 1;
+    height: 100%;
+    transform: skew(-7deg, 0deg) rotate(-6.5deg);
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.home .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    height: 400px;
+    width: 100%;
+    padding: 30px;
+    max-width: 1000px;
+    margin-top: -225px;
+    margin-right: auto;
+    margin-left: auto;
+    flex-direction: column;
+    border-radius: 3px;
+    background-color: #fff;
+    box-shadow: 0 18px 45px 0 rgba(0, 0, 0, .13);
+}
+
+.home .card .img-card img {
+    width: 202px;
+    height: 202px;
+    border-radius: 100%;
+    margin-top: -125px;
+    margin-bottom: 25px;
+    border: 5px solid #fff;
+    box-shadow: 0 8px 40px 0 rgba(0, 0, 0, .21);
+    animation: float 3s linear infinite;
+}
+
+.home .card .info {
+    margin-right: auto;
+    text-align: center;
+    margin-left: auto;
+}
+
+.home .card .info .name {
+    font-weight: bold;
+    font-size: 28px;
+    color: #1A1A1A;
+}
+
+.home .card .info .location {
+    font-size: 17px;
+    margin-top: 20px;
+    color: #929292;
+}
+
+.home .card .info .me {
+    text-align: center;
+    width: 50%;
+    margin-top: 20px;
+    margin-right: auto;
+    text-align: center;
+    margin-left: auto;
+    margin-bottom: 30px;
+}
+
+.home .card .info .send {
+    background-color: #1A1A1A;
+    border-radius: 3px;
+    color: #fff;
+    padding: 10px;
+    animation: float 3s linear;
+}
+
+@keyframes float {
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-30px);
+    }
+}
+
+@media (min-width:768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+@media (max-width:768px) {
+    .home .card .info .name {
+        font-size: 22px;
+    }
+    .home .card .info .me {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
+
+
+/* medium  */
+
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+
+/* large  */
+
+@media (min-width:1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+.home {
+    text-align: center;
+}
+
+
+/* start study */
+
+.study {
+    padding-top: var(--padding);
+    padding-bottom: var(--padding);
+}
+
+.study .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 20px;
+}
+
+.study .container .box {
+    margin: 10px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+    border-radius: 3px;
+    padding: 30px;
+    transition: var(--main-transition);
+}
+
+.study .container .box:hover {
+    transform: translateY(-10px);
+}
+
+.study .container .box img {
+    width: 120px;
+    height: 120px;
+    text-align: center;
+    margin: 3px;
+}
+
+.study .container .box hr {
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 80%;
+    color: #00000077;
+}
+
+.study .container .box h3 {
+    text-align: left;
+    color: #1A1A1A;
+}
+
+.study .container .box ul {
+    text-align: left;
+    margin-left: 20px;
+}
+
+.study .container .box ul li {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+    color: #929292;
+}
+
+.study .container .box ul li:first-child {
+    color: #1C0D3B;
+}
+
+
+/* end study */
+
+
+/* start footer */
+
+.footer {
+    background-color: #1A1A1A;
+    height: 100px;
+    text-align: center;
+    padding: 30px;
+}
+
+.footer h5 {
+    letter-spacing: 1px;
+    margin-top: 20px;
+    color: #fff;
+}
+
+
+/* end footer */
